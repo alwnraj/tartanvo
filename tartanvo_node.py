@@ -31,15 +31,15 @@
 # LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
 # ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
-import cv2
+#import cv2
 import numpy as np
 
-import rospy
-from sensor_msgs.msg import Image, CameraInfo
-from geometry_msgs.msg import PoseStamped
-from nav_msgs.msg import Odometry
-from std_msgs.msg import Float32
-from cv_bridge import CvBridge
+import rospy # type: ignore
+from sensor_msgs.msg import Image, CameraInfo # type: ignore
+from geometry_msgs.msg import PoseStamped # type: ignore
+from nav_msgs.msg import Odometry # type: ignore
+from std_msgs.msg import Float32 # type: ignore
+from cv_bridge import CvBridge # type: ignore
 
 from Datasets.utils import ToTensor, Compose, CropCenter, DownscaleFlow, make_intrinsics_layer
 from Datasets.transformation import se2SE, SO2quat

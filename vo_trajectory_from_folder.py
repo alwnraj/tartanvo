@@ -1,5 +1,5 @@
-from torch.utils.data import DataLoader
-from Datasets.utils import ToTensor, Compose, CropCenter, dataset_intrinsics, DownscaleFlow, plot_traj, visflow
+from torch.utils.data import DataLoader # type: ignore
+from Datasets.utils import ToTensor, Compose, CropCenter, dataset_intrinsics, DownscaleFlow, load_kiiti_intrinsics, plot_traj, visflow
 from Datasets.tartanTrajFlowDataset import TrajFolderDataset
 from Datasets.transformation import ses2poses_quat
 from evaluator.tartanair_evaluator import TartanAirEvaluator
@@ -7,7 +7,7 @@ from TartanVO import TartanVO
 
 import argparse
 import numpy as np
-import cv2
+import cv2 # type: ignore
 from os import mkdir
 from os.path import isdir
 
